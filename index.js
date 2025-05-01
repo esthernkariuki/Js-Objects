@@ -1,3 +1,4 @@
+                                    // Question1
 // Create a BankAccount constructor function that takes a user's name and balance. Add a method called deposit(amount) 
 // that increases the balance and logs the new balance, and another method withdraw(amount) that decreases the balance only
 //  if there are enough funds. Create 3 user accounts and simulate deposits and withdrawals.
@@ -5,7 +6,7 @@
 //bankaccount constructor function(name,balance)
 //set this.nameto name and this.balance to balance
 //add method=function deposit(amount) 
-//incrementing the the balance with the amount
+//add the the balance with the amount
 //log the message showing deposit and  new balance
 //add method withdraw()
 //decrement this.balance by amount using if and else condition 
@@ -46,7 +47,7 @@ accounts2.deposit(500);
 accounts3.deposit(1200);
 
 
-
+                                    // question2
 //  Create an object taskList with a property tasks (an array of task names).
 //  Add methods: addTask(task) to add a task, completeTask(task) to remove it, and listTasks() to print all remaining tasks. 
 // Test the object with 4–5 tasks and demonstrate the functionality of each method.
@@ -61,50 +62,112 @@ accounts3.deposit(1200);
 //log the output
 //log the remaining using listTasks
 //loop through the tasks ans set  a condition to check if its completed
-//task.loist.addtask(Buy milk")
+//task.loist.addtask(Buy milk")                                                                                                                                                                                     
 //log using4 to 5 arguments 
 
 
-// const taskList=
-// task=[];
-// addTask: function addTask(task) {
-//     this.task.push({name:task});
-//     console.log(`${task} added`)
+// const taskList={
+// tasks:[],
 
-// };
-// completeTask: function completeTask(task){
-// const findTask=this.task.find(task.name===task)
+// addTask: function (task) {
+//     this.tasks.push(task);
+//     console.log(`${task} added`);
+
+// },
+// completeTask: function(){
+// const findTask = this.tasks.find (t=> t=== task);
 // if( findTask) {
-// findTask.completed =true;
-// console.log(`${task} completed`);
-
+// this.tasks =this.tasks.filter(t =>t!== findTask);
+// console.log(`"${task}" completed`);}
+// else{
+//     console.log(`"${task}" not found`);
+    
 // }
-// };
+
+    
+// },
 //  listTask:
-// function listTask(task){
-//     this.task.forEach(task => {
-//         if(task.name,task.complete===true)
-//         {
-//             console.log("done")
+// function(){
+//         if(this.tasks.length === 0){
+//             console.log("done");
+       
 //         }
 //         else {
 //             console.log("not done");
+//             this.tasks.forEach((task,index) => {
+//                 console.log(`${index+1} in the ${task}`);
+                
+//             });
 
             
 //         }
 
-//     });
+//     }
 
 // };
 
 // taskList.addTask("purchased books");
 // taskList.addTask(" purchased vegetables");
-// taskList.addTask("purchased institution")
+// taskList.addTask("purchased institution");
+// taskList.addTask("finish assignment")
+// taskList.addTask("Read a book")
 // taskList.completeTask("purchased vegetables");
 // taskList.completeTask("purchased institution");
+
 // taskList.listTask();
 
 
+
+
+// onst taskList = {
+//     tasks: [],
+
+//     // Method to add a task
+//     addTask: function(task) {
+//         this.tasks.push(task);
+//         console.log(`Task added: "${task}"`);
+//     },
+
+//     // Method to complete a task using .find()
+//     completeTask: function(task) {
+//         const foundTask = this.tasks.find(t => t === task);
+//         if (foundTask) {
+//             this.tasks = this.tasks.filter(t => t !== foundTask);
+//             console.log(`Task completed: "${task}"`);
+//         } else {
+//             console.log(`Task not found: "${task}"`);
+//         }
+//     },
+
+//     // Method to list all remaining tasks using .forEach()
+//     listTasks: function() {
+//         if (this.tasks.length === 0) {
+//             console.log("No remaining tasks.");
+//         } else {
+//             console.log("Remaining tasks:");
+//             this.tasks.forEach((task, index) => {
+//                 console.log(`${index + 1}: ${task}`);
+//             });
+//         }
+//     }
+// };
+
+// // Testing the taskList object
+// taskList.addTask("Buy groceries");
+// taskList.addTask("Walk the dog");
+// taskList.addTask("Finish homework");
+// taskList.addTask("Read a book");
+// taskList.addTask("Clean the house");
+
+// // List all tasks
+// taskList.listTasks();
+
+// // Complete a task
+// taskList.completeTask("Finish homework");
+
+// // List remaining tasks again
+// taskList.listTasks();ain
+// // taskList.listTasks();
 
 
 
@@ -121,10 +184,8 @@ accounts3.deposit(1200);
 //set ths.name=name and this.scores=scores
 //  create a function getAverage()
 //return average score by addding the scores dividing by the number of the students
-//initialize sum =0
-//loop through the array to get the sum and return sum/lenght of this scores
 //create haspassed() function
-//  returnby  checking if  average is >=50
+//  return by  checking if  average is >=50
 //create the objects and check their passing scores
 //log using atleast 2 arguments
 
@@ -132,12 +193,9 @@ function student(name,scores) {
     this.name=name;
     this.scores=scores;
     this.getAverage=function(){
-        const sum= this.scores.reduce((acc,score)=>acc+score,0)
-    //     for(i=0;i<this.scores.length;i++);
-    // sum +=this.scores[i]
-    
+        const total= this.scores.reduce((acc,score)=>acc+score,0)
 
-    return sum/this.scores.length
+    return total/this.scores.length
     };
 
     this.haspassed=function(){
@@ -150,8 +208,6 @@ const students1 = new student("Lwam",[77,96]);
 console.log(students1.getAverage(),students1.haspassed())
 const students2 =new student("Kamau",[30,98]);
 console.log( students2.getAverage(),students2.haspassed())
- 
-
 
 
 
@@ -164,37 +220,33 @@ console.log( students2.getAverage(),students2.haspassed())
 
 //start
 //create object array of = items(name,price)
-//crete an empty items 
-//add method addItem(name ,price)
-//add new object to this .item and logg the output
-//add method to calculate the total cost in cart
-//initialize total to 0
-//loop through the this.items
-//add total item.price and return the total
-//add 3 items 
+//create an empty items 
+//add method addItem
+//add new object to this.item  by pushing at the end and log the output
+//add method gettotal() calculate the total cost in cart
+//loop through the this.items using reduce to get the total
+//add 3 arguments 
 //log the total
 
-const ShoppingCart={
-    items:[],
+function ShoppingCart(){
+   this.items=[];
 
-addItem: function addItem(name,price) {
-         this.items.push({name:name, price:price})  ;
-         console.log(`${name} added`);},
+this.addItem =function(item) {
+         this.items.push({item})  ;
+         console.log(`item ${item.name} and price ${item.price} added`);},
 
- getTotal:function() {
-    let total=0;
-    for( const total of this.items){
-    total += item.price;}
- 
- 
- return total;    
-    }
+ this.getTotal=function() {
+  
+ return this.items.reduce((total,item)=>total+ item.price,0) ;
     };
+}
+const ShoppingCart1=new ShoppingCart();
 
-ShoppingCart.addItem("sausage",500)
-ShoppingCart.addItem("books",100)
-ShoppingCart.addItem("vegetables",300)
-console.log(ShoppingCart.getTotal());
+ShoppingCart1.addItem({name:"Sausage",price: 500});
+ShoppingCart1.addItem({name:"Books",price:100});
+ShoppingCart1.addItem({name:"Vegetables",price:300});
+const total= ShoppingCart1.getTotal();
+console.log(`Total cost is ${total}`);
 
 
 
@@ -206,27 +258,50 @@ console.log(ShoppingCart.getTotal());
 //  Add a method isClassic() that returns true if the year is before 2000, and a method recommend() that returns a string like "Highly recommended!"
 //  if rating is above 8. Create at least 3 movies and call these methods on each.
 
-//movie  to have parametres (title,year,rating)
-//add method =isClassic()
+// create functions movie  to have constructers (title,year,rating)
 //set this.title=title,this.year=year,this.rating=rating
+//set method isclassic()
+//return by compariny the year with 2000
 //add a method recommend()
-// set a condition to give out the  one the passed the condion annd those that are not passing the condition if the movie is highly recommended
+// set a condition to give out the  one the passed the condition annd those that are not passing the condition if the movie is highly recommended by comparing the rating with 8
 //return true =>year is before 2000,
-//use if and else to check which met the conditions
-//method=recommend()=return=string if the item >8
-//create movie objects
+//create objects  of  movie
 //log using atleast 3 arguments and call each
 
 
-function movie(title,year,rating) {
+function Movie(title,year,rating) {
     this.title=title;
     this.year=year;
     this.rating=rating;
 
-    this.isClassic=function(){
-        return this.year >2000
-    }
+
+this.isClassic = function(){
+        return this.year < 2000;
+    };
+
+    this.recommend=function(){
+       return  this.rating > 8 ? "Highly recommended":"Not recommended";
+       };
+        
+    }    
     
-}
+
+const movie1 = new Movie("upside down",1999,3.7);
+const movie2= new Movie("insideout",2003,9.0);
+const movie3 = new Movie("blindspot",1990,8.1);
+
+console.log(`${movie1.title} is a classic:${movie1.isClassic()}`);
+console.log(movie1.recommend());
+
+console.log(`${movie2.title} is a classic :${movie2.isClassic()}`);
+console.log(movie2.recommend());
+
+console.log(`${movie3.title} is a classic:${movie3.isClassic()}`);
+console.log(movie3.recommend());
+
+
+
+
+
 
 
