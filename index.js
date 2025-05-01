@@ -66,112 +66,55 @@ accounts3.deposit(1200);
 //log using4 to 5 arguments 
 
 
-// const taskList={
-// tasks:[],
+const taskList={
+tasks:[],
 
-// addTask: function (task) {
-//     this.tasks.push(task);
-//     console.log(`${task} added`);
+addTask: function (task) {
+    this.tasks.push(task);
+    console.log(`${task} added`);
 
-// },
-// completeTask: function(){
-// const findTask = this.tasks.find (t=> t=== task);
-// if( findTask) {
-// this.tasks =this.tasks.filter(t =>t!== findTask);
-// console.log(`"${task}" completed`);}
-// else{
-//     console.log(`"${task}" not found`);
+},
+completeTask: function(){
+const findTask = this.tasks.find (t=> t=== task);
+if( findTask) {
+this.tasks =this.tasks.filter(t =>t!== findTask);
+console.log(`"${task}" completed`);}
+else{
+    console.log(`"${task}" not found`);
     
-// }
+}
 
     
-// },
-//  listTask:
-// function(){
-//         if(this.tasks.length === 0){
-//             console.log("done");
+},
+ listTask:
+function(){
+        if(this.tasks.length === 0){
+            console.log("done");
        
-//         }
-//         else {
-//             console.log("not done");
-//             this.tasks.forEach((task,index) => {
-//                 console.log(`${index+1} in the ${task}`);
+        }
+        else {
+            console.log("not done");
+            this.tasks.forEach((task,index) => {
+                console.log(`${index+1} in the ${task}`);
                 
-//             });
+            });
 
             
-//         }
+        }
 
-//     }
+    }
 
-// };
+};
 
-// taskList.addTask("purchased books");
-// taskList.addTask(" purchased vegetables");
-// taskList.addTask("purchased institution");
-// taskList.addTask("finish assignment")
-// taskList.addTask("Read a book")
-// taskList.completeTask("purchased vegetables");
-// taskList.completeTask("purchased institution");
+taskList.addTask("purchased books");
+taskList.addTask(" purchased vegetables");
+taskList.addTask("purchased institution");
+taskList.addTask("finish assignment")
+taskList.addTask("Read a book")
+taskList.completeTask("purchased vegetables");
+taskList.completeTask("purchased institution");
 
-// taskList.listTask();
-
-
-
-
-// onst taskList = {
-//     tasks: [],
-
-//     // Method to add a task
-//     addTask: function(task) {
-//         this.tasks.push(task);
-//         console.log(`Task added: "${task}"`);
-//     },
-
-//     // Method to complete a task using .find()
-//     completeTask: function(task) {
-//         const foundTask = this.tasks.find(t => t === task);
-//         if (foundTask) {
-//             this.tasks = this.tasks.filter(t => t !== foundTask);
-//             console.log(`Task completed: "${task}"`);
-//         } else {
-//             console.log(`Task not found: "${task}"`);
-//         }
-//     },
-
-//     // Method to list all remaining tasks using .forEach()
-//     listTasks: function() {
-//         if (this.tasks.length === 0) {
-//             console.log("No remaining tasks.");
-//         } else {
-//             console.log("Remaining tasks:");
-//             this.tasks.forEach((task, index) => {
-//                 console.log(`${index + 1}: ${task}`);
-//             });
-//         }
-//     }
-// };
-
-// // Testing the taskList object
-// taskList.addTask("Buy groceries");
-// taskList.addTask("Walk the dog");
-// taskList.addTask("Finish homework");
-// taskList.addTask("Read a book");
-// taskList.addTask("Clean the house");
-
-// // List all tasks
-// taskList.listTasks();
-
-// // Complete a task
-// taskList.completeTask("Finish homework");
-
-// // List remaining tasks again
-// taskList.listTasks();ain
-// // taskList.listTasks();
-
-
-
-
+taskList.listTask();
 
 
 
